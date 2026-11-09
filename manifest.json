@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "FB Profile Preview & Unlocker Pro",
+  "version": "2.2.1",
+  "description": "Pro-grade hover preview and full-resolution hotkey downloader for Facebook covers and profile pictures.",
+  "icons": {
+    "16": "icon128.png",
+    "48": "icon128.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://*.facebook.com/*",
+    "https://*.fbcdn.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "FB Profile Preview & Unlocker Pro",
+    "default_icon": {
+      "16": "icon128.png",
+      "48": "icon128.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.facebook.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

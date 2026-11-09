@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About & Credits — FB Unlocker Pro v2.2.0</title>
+  <style>
+    :root {
+      --bg: #0b0e14;
+      --card: #141923;
+      --border: rgba(255, 255, 255, 0.08);
+      --accent: #1877f2;
+      --text: #f0f2f5;
+      --muted: #9aa3b2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: radial-gradient(circle at top, #132238 0%, var(--bg) 55%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 48px 20px;
+    }
+
+    .wrapper {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(24, 119, 242, 0.18);
+      border: 1px solid rgba(24, 119, 242, 0.4);
+      color: #6ab0ff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .section h2 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section p, .section li {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    ul {
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    strong { color: #e4e6eb; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .feature-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .feature-box h3 {
+      font-size: 13.5px;
+      color: #6ab0ff;
+      margin-bottom: 4px;
+    }
+
+    .feature-box p {
+      font-size: 12.5px;
+    }
+
+    .credits-footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 28px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="hero">
+      <div class="hero-badge">MANIFEST V3 • PRO ARCHITECTURE</div>
+      <h1>FB Unlocker Pro v2.2.0</h1>
+      <p>Instant uncropped cover photo & profile picture previewer with one-key full-resolution saving.</p>
+    </div>
+
+    <div class="section">
+      <h2>How It Works</h2>
+      <p>
+        When a Facebook profile is locked, Facebook places a transparent interaction overlay (<code>aria-label="Learn more"</code>) over the cover photo and profile picture to block clicks. <strong>FB Unlocker Pro</strong> bypasses that click-shield locally inside your browser DOM, reads the underlying media asset, and renders an uncropped floating preview card on hover.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Core Capabilities</h2>
+      <div class="grid">
+        <div class="feature-box">
+          <h3>Locked & Unlocked Covers</h3>
+          <p>Detects both standard cover links and locked-profile banner overlays without relying on fragile CSS classes.</p>
+        </div>
+        <div class="feature-box">
+          <h3>SVG Avatar Extraction</h3>
+          <p>Parses Facebook's SVG profile picture containers to preview full-frame avatars on hover.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Highest-Res Selector</h3>
+          <p>Automatically evaluates <code>srcset</code> candidates to extract the largest available CDN resolution.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Instant Hotkey Saver</h3>
+          <p>Press <strong>D</strong> or <strong>Ctrl+S</strong> while hovering to download directly via the background service worker.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Privacy & Security Guarantee</h2>
+      <ul>
+        <li><strong>100% Local Execution:</strong> No external servers, analytics, or tracking scripts are used.</li>
+        <li><strong>Zero Account Risk:</strong> Operates purely on already-rendered DOM elements without making automated API requests.</li>
+        <li><strong>Minimal Permissions:</strong> Only uses <code>downloads</code> (to save images when you press the hotkey) and <code>storage</code> (to remember your on/off toggle).</li>
+      </ul>
+    </div>
+
+	<div class="credits-footer">
+	  <p><strong>FB Unlocker Pro v2.2.0</strong> — Crafted for speed, precision, and clean UI.</p>
+	  <p style="margin-top: 6px;">Developed by ❤️ Yashvir Gaming</p>
+	</div>
+  </div>
+</body>
+</html>
